@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Морской бой</title>
+</head>
+
+<body>    
+    <div class="container">
+        <header class="header">
+            <h1>Морские крестики-нолики</h1>
+        </header>
+        <aside class="aside_1">
+            <h2>Счёт</h2>
+            <h3>Адмирал</h3>
+            <img src="./img/ship7.png" alt="img" class="img_ship"/>
+            <div class="counter" id="counterUser"></div>               
+        </aside>
+        <aside class="aside_2">
+            <h2>Счёт</h2>
+            <h3>Пират</h3>
+            <img src="./img/schip.png" alt="img" class="img_ship"/>
+            <div class="counter" id="counterComp">
+            </div>              
+        </aside>
+        <div id="board">
+            <div class="fin"><span id="fin"></span></div>
+            <div id="rules">                
+                <h4>ПРАВИЛА ИГРЫ:</h4>
+                <p>Королевский Адмирал и капитан Джек Воробей сражаются на морских просторах. Для победы им нужно выстроить свои корабли в линию. </p> <br>
+                   <p> * Корабль занимает одну клетку игрового поля.</p>                  
+                   <p> * Каждый капитан выставляет свой корабль поочередно. </p>
+                   <p> * Победа достанется одному!.</p> 
+                   <h4> Вы готовы? Тогда к вперёд!</h4>
+                <button type="button" id="start">начать игру</button>
+            </div>
+            <table>
+                <tr>                   
+                    <td class="field" id="1"></td>
+                    <td class="field" id="2"></td>
+                    <td class="field" id="3"></td>                    
+                </tr>
+                <tr>                   
+                    <td class="field" id="4"></td>
+                    <td class="field" id="5"></td>
+                    <td class="field" id="6"></td>                    
+                </tr>
+                <tr>                   
+                    <td class="field" id="7"></td>
+                    <td class="field" id="8"></td>
+                    <td class="field" id="9"></td>                  
+                </tr>                
+            </table>
+            <div class="container_btn">
+              <button class="restart isHidden" type="button">Снова в бой</button>
+              <button class="restart resetCount isHidden" type="button">Сбросить счёт</button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
