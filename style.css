@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url("./fonts/Merriweather-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url("./fonts/Merriweather-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("./fonts/Inter-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("./fonts/Inter-Bold.ttf");
+    font-weight: 700;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    background-image: url(./img/fon.jpg);
+    background-size: cover;
+    font-family: 'Inter';
+    min-height: 100vh;
+}
+
+.header {
+    grid-column: 2 /3;
+    grid-row: 1 / 2;
+    padding: 10px 0;
+}
+
+h1 {
+    font-family: 'Merriweather';
+    text-align: center;
+    color: rgb(27, 11, 97);
+    margin: 0 auto;
+    font-size: 50px;
+    text-shadow: 3px 3px 3px rgb(238, 243, 240);
+}
+
+h2 {
+    font-family: 'Inter';
+    text-align: center;
+    color: gold;
+    text-shadow: 3px 3px 3px rgb(21, 97, 50);
+    font-size: 35px;
+}
+
+h3 {
+    font-family: 'Inter';
+    text-align: center;
+    color: rgb(30, 90, 12);
+    text-shadow: 3px 3px 3px rgb(223, 202, 14);
+    font-size: 25px;
+}
+
+.aside_1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 1px 0;
+}
+
+.aside_2 {
+    grid-column: 3 /4;
+    grid-row: 2 / 3;
+    padding: 1px 0;
+}
+.img_ship {
+    margin-left: 35%;
+}
+
+.counter {
+    background-image: url("./img/radar.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 80%;
+    height: 210px;
+    margin: 35px auto 10px;
+    font-size: 85px;
+    font-weight: bold;
+    color: seashell;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#board {
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#rules {
+    position: absolute;
+    top: 30px;
+    left: 15%;
+    width: 75%;        
+    background: darkblue;
+    border: 25px double rgb(232, 232, 238);
+    z-index: 3;
+    color:rgb(253, 250, 245);
+    font-size: 20px;
+    padding: 20px 20px;  
+    text-align: center; 
+}
+.isHidden {
+    display: none;
+}
+h4 {
+    margin: 20px auto;    
+    text-align: center;
+    color:rgb(204, 238, 12);
+}
+#start, .restart {
+    margin: 5px;   
+    width: 175px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 3px solid rgb(155, 11, 30);
+    border-radius: 5px;
+    font-family: 'Inter';
+    text-align: center;
+    color: darkblue;
+    cursor: pointer;
+}
+#start:hover,
+.restart:hover,
+.resetCount:hover {
+    background-color: rgb(204, 238, 12);
+}
+
+table {
+    margin: 50px auto;
+    position: relative;
+    background: darkblue;
+    border-collapse: collapse;
+    border: 5px solid darkblue;
+    table-layout: fixed;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(230, 241, 72);
+}
+
+.ship {
+    background: url(./img/schip2.png) no-repeat center center;
+    background-size: 80%;
+}
+
+.fin {      
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(243, 227, 7);
+    text-align: center;   
+    text-shadow: 4px 3px 4px rgb(13, 3, 22);  
+    height: 50px; 
+}
+
+@media screen and (max-width: 1250px) {
+    .counter {
+        font-size: 60px;
+        padding-top: 40px;
+        margin: 10px auto;
+    }
+    h1 {
+        font-size: 45px;
+    }
+
+    form input {
+        font-size: 20px;
+    }
+    #rules {     
+        left: 0%;
+        width: 100%;          
+        font-size: 20px;       
+}
+}
+
+@media screen and (max-width: 1060px) {
+    .counter {
+        font-size: 60px;
+        padding-top: 25px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+    #rules {       
+        line-height: 22px;            
+        font-size: 17px;  
+        padding-top: 5px;     
+}
+}
+.container_btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
+}
